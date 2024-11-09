@@ -3,6 +3,7 @@ import './App.css';
 import React from 'react';
 
 import ModalSample1 from './ModalSample1/ModalSample1';
+import ModalSample2 from './ModalSample2/ModalSample2';
 
 export default function App(): React.JSX.Element {
   return (
@@ -13,6 +14,7 @@ export default function App(): React.JSX.Element {
 
       <ModalSample1 />
 
+      <ModalSample2 />
     </div>
   );
 }
