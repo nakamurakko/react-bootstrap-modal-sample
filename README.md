@@ -14,8 +14,6 @@ React Bootstrap > Components > Modals の [Live demo](https://react-bootstrap.gi
 
 Promise で戻り値を返すサンプル。
 
----
-
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
