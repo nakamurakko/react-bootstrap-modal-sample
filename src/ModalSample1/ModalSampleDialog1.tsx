@@ -37,7 +37,6 @@ export default function ModalSampleDialog1({ showDialog, onSelect }:
       <Modal.Body>
         <Form>
           <Form.Check
-            inline
             label='Apple'
             name='fruit'
             type='radio'
@@ -45,7 +44,6 @@ export default function ModalSampleDialog1({ showDialog, onSelect }:
             onChange={(event): void => setSelectedFruit(event.target.value)}
           />
           <Form.Check
-            inline
             label='Banana'
             name='fruit'
             type='radio'
@@ -53,7 +51,6 @@ export default function ModalSampleDialog1({ showDialog, onSelect }:
             onChange={(event): void => setSelectedFruit(event.target.value)}
           />
           <Form.Check
-            inline
             label='Cherry'
             name='fruit'
             type='radio'
