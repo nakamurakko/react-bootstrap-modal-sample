@@ -66,13 +66,6 @@ const ModalSampleDialog2 = forwardRef<ModalSampleDialog2Ref>((never, ref) => {
             value='Banana'
             onChange={(event): void => setSelectedFruit(event.target.value)}
           />
-          <Form.Check
-            label='Cherry'
-            name='fruit'
-            type='radio'
-            value='Cherry'
-            onChange={(event): void => setSelectedFruit(event.target.value)}
-          />
         </Form>
       </Modal.Body>
       <Modal.Footer>
