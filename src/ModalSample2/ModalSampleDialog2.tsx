@@ -70,7 +70,8 @@ const ModalSampleDialog2 = forwardRef<ModalSampleDialog2Ref>((never, ref) => {
       </Modal.Body>
       <Modal.Footer>
         <Button
-          onClick={handleSelect}>
+          onClick={handleSelect}
+        >
           Select
         </Button>
       </Modal.Footer>
