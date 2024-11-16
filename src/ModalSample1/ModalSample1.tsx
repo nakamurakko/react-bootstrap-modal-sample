@@ -24,7 +24,7 @@ export default function ModalSample1(): React.JSX.Element {
   const handleSelect = (selectedFruit: string): void => {
     setSelectedFruit(selectedFruit);
     setShowDialog(false);
-  }
+  };
 
   return (
     <div>
