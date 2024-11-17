@@ -30,17 +30,15 @@ const ModalSampleDialog2 = forwardRef<ModalSampleDialog2Ref>((never, ref) => {
     }
   };
 
-  useImperativeHandle(ref,
-    () => ({
+  useImperativeHandle(ref, () => ({
 
-      showdDialog: (resultFunction?: ResultFunction): void => {
-        setSelectedFruit('');
-        resultFunctionRef.current = resultFunction;
-        setShowSelf(true);
-      }
+    showdDialog: (resultFunction?: ResultFunction): void => {
+      setSelectedFruit('');
+      resultFunctionRef.current = resultFunction;
+      setShowSelf(true);
+    }
 
-    })
-  );
+  }));
 
   return (
     <Modal

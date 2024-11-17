@@ -29,19 +29,17 @@ const ModalSampleDialog3 = forwardRef<ModalSampleDialog3Ref>((never, ref) => {
     }
   };
 
-  useImperativeHandle(ref,
-    () => ({
+  useImperativeHandle(ref, () => ({
 
-      showdDialog: async (): Promise<string> => {
-        return await new Promise((resolve: ResultFunction) => {
-          setSelectedFruit('');
-          resultFunctionRef.current = resolve;
-          setShowSelf(true);
-        });
-      }
+    showdDialog: async (): Promise<string> => {
+      return await new Promise((resolve: ResultFunction) => {
+        setSelectedFruit('');
+        resultFunctionRef.current = resolve;
+        setShowSelf(true);
+      });
+    }
 
-    })
-  );
+  }));
 
   return (
     <Modal
