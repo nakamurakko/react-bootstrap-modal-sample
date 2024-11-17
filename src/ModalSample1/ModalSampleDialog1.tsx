@@ -11,7 +11,6 @@ export default function ModalSampleDialog1({ showDialog, onSelect }:
     /**
      * 選択時イベント。
      * @param selectedFruit 選択した値。
-     * @returns
      */
     onSelect: (selectedFruit: string) => void
   }

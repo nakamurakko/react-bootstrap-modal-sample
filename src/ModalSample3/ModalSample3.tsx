@@ -13,7 +13,6 @@ export default function ModalSample3(): React.JSX.Element {
 
   /**
    * ダイアログを表示する。
-   * @returns
    */
   const handleShowDialog = async (): Promise<void> => {
     await modalSampleDialog3Ref.current?.showdDialog()

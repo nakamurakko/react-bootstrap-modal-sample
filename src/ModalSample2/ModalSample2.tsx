@@ -13,7 +13,6 @@ export default function ModalSample2(): React.JSX.Element {
 
   /**
    * ダイアログを表示する。
-   * @returns
    */
   const handleShowDialog = (): void => {
     modalSampleDialog2Ref.current?.showdDialog((value) => {
