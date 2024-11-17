@@ -7,7 +7,7 @@ export interface ModalSampleDialog2Ref {
    * @param resultFunction 表示終了後に実行する関数。
    * @returns
    */
-  showdDialog: (resultFunction?: (value: string) => void) => void;
+  showdDialog: (resultFunction?: ResultFunction) => void;
 }
 
 type ResultFunction = (value: string) => void;
