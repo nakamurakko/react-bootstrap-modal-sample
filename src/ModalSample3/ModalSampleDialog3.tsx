@@ -1,5 +1,5 @@
 import React, { forwardRef, useImperativeHandle, useRef, useState } from 'react';
-import { Button, Form, Modal, ModalProps } from 'react-bootstrap';
+import { Button, Form, Modal } from 'react-bootstrap';
 
 export interface ModalSampleDialog3Ref {
   /**
@@ -16,7 +16,6 @@ type ResultFunction = (value: string) => void;
  */
 const ModalSampleDialog3 = forwardRef<ModalSampleDialog3Ref>((never, ref) => {
 
-  const dialogRef = useRef<ModalProps>(null);
   const [showSelf, setShowSelf] = useState<boolean>(false);
   const resultFunctionRef = useRef<ResultFunction>();
 
@@ -43,7 +42,6 @@ const ModalSampleDialog3 = forwardRef<ModalSampleDialog3Ref>((never, ref) => {
 
   return (
     <Modal
-      ref={dialogRef}
       show={showSelf}
     >
       <Modal.Header>
