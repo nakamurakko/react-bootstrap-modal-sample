@@ -5,7 +5,6 @@ export interface ModalSampleDialog2Ref {
   /**
    * ダイアログを表示する。
    * @param resultFunction 表示終了後に実行する関数。
-   * @returns
    */
   showdDialog: (resultFunction?: ResultFunction) => void;
 }
@@ -15,7 +14,7 @@ type ResultFunction = (value: string) => void;
 /**
  * Modal sample dialog 2
  */
-const ModalSampleDialog2 = forwardRef<ModalSampleDialog2Ref>((never, ref) => {
+const ModalSampleDialog2 = forwardRef<ModalSampleDialog2Ref>((prop, ref) => {
 
   const [showSelf, setShowSelf] = useState<boolean>(false);
   const resultFunctionRef = useRef<ResultFunction>();
