@@ -66,11 +66,7 @@ const ModalSampleDialog3 = forwardRef<ModalSampleDialog3Ref>((props, ref) => {
         </Form>
       </Modal.Body>
       <Modal.Footer>
-        <Button
-          onClick={handleSelect}
-        >
-          Select
-        </Button>
+        <Button onClick={handleSelect}>Select</Button>
       </Modal.Footer>
     </Modal>
   );

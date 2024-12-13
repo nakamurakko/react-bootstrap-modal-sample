@@ -52,11 +52,7 @@ export default function ModalSampleDialog1({ showDialog, onSelect }:
         </Form>
       </Modal.Body>
       <Modal.Footer>
-        <Button
-          onClick={(): void => onSelect(selectedFruit)}
-        >
-          Select
-        </Button>
+        <Button onClick={(): void => onSelect(selectedFruit)}>Select</Button>
       </Modal.Footer>
     </Modal>
   );
