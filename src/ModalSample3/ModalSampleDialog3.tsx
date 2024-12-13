@@ -17,7 +17,7 @@ type ResultFunction = (value: string) => void;
 const ModalSampleDialog3 = forwardRef<ModalSampleDialog3Ref>((props, ref) => {
 
   const [showSelf, setShowSelf] = useState<boolean>(false);
-  const resultFunctionRef = useRef<ResultFunction>();
+  const resultFunctionRef = useRef<ResultFunction>(undefined);
 
   const [selectedFruit, setSelectedFruit] = useState<string>('');
 

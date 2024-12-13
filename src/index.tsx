@@ -5,11 +5,9 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from 'react-router-dom';
 
-import { Router } from '@remix-run/router';
-
 import App from './App';
 
-const router: Router = createBrowserRouter(
+const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<App />} />
   )
