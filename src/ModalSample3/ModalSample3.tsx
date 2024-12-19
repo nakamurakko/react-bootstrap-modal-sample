@@ -33,9 +33,7 @@ export default function ModalSample3(): React.JSX.Element {
         </Row>
       </Container>
 
-      <ModalSampleDialog3
-        ref={modalSampleDialog3Ref}
-      />
+      <ModalSampleDialog3 ref={modalSampleDialog3Ref} />
     </div>
   );
 

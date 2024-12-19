@@ -41,9 +41,7 @@ const ModalSampleDialog3 = forwardRef<ModalSampleDialog3Ref>((props, ref) => {
   }));
 
   return (
-    <Modal
-      show={showSelf}
-    >
+    <Modal show={showSelf}>
       <Modal.Header>
         <Modal.Title>Modal Sample dialog 3</Modal.Title>
       </Modal.Header>
