@@ -1,7 +1,9 @@
 import React, { useRef, useState } from 'react';
 import { Button, Col, Container, Row } from 'react-bootstrap';
 
-import ModalSampleDialog2, { ModalSampleDialog2Ref } from './ModalSampleDialog2';
+import ModalSampleDialog2 from './ModalSampleDialog2';
+
+import type { ModalSampleDialog2Ref } from './ModalSampleDialog2';
 
 /**
  * Modal sample 2

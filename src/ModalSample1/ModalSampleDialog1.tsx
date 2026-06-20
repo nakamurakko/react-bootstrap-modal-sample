@@ -56,4 +56,5 @@ export default function ModalSampleDialog1({ showDialog, onSelect }:
       </Modal.Footer>
     </Modal>
   );
+
 }
