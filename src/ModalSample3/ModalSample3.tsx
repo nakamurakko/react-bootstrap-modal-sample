@@ -17,7 +17,7 @@ export default function ModalSample3(): React.JSX.Element {
    * ダイアログを表示する。
    */
   const handleShowDialog = async (): Promise<void> => {
-    await modalSampleDialog3Ref.current?.showdDialog()
+    await modalSampleDialog3Ref.current?.showDialog()
       .then(value => {
         setSelectedFruit(value);
       });

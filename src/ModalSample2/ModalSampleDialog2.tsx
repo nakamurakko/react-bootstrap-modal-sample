@@ -6,7 +6,7 @@ export interface ModalSampleDialog2Ref {
    * ダイアログを表示する。
    * @param resultFunction 表示終了後に実行する関数。
    */
-  showdDialog: (resultFunction?: ResultFunction) => void;
+  showDialog: (resultFunction?: ResultFunction) => void;
 }
 
 type ResultFunction = (value: string) => void;
@@ -30,7 +30,7 @@ const ModalSampleDialog2 = forwardRef<ModalSampleDialog2Ref>((props, ref) => {
 
   useImperativeHandle(ref, () => ({
 
-    showdDialog: (resultFunction?: ResultFunction): void => {
+    showDialog: (resultFunction?: ResultFunction): void => {
       setSelectedFruit('');
       resultFunctionRef.current = resultFunction;
       setShowSelf(true);

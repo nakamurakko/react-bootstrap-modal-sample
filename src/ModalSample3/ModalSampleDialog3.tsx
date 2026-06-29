@@ -6,7 +6,7 @@ export interface ModalSampleDialog3Ref {
    * ダイアログを表示する。
    * @returns 選択した値を返す。
    */
-  showdDialog: () => Promise<string>;
+  showDialog: () => Promise<string>;
 }
 
 type ResultFunction = (value: string) => void;
@@ -30,7 +30,7 @@ const ModalSampleDialog3 = forwardRef<ModalSampleDialog3Ref>((props, ref) => {
 
   useImperativeHandle(ref, () => ({
 
-    showdDialog: async (): Promise<string> => {
+    showDialog: async (): Promise<string> => {
       return await new Promise((resolve: ResultFunction) => {
         setSelectedFruit('');
         resultFunctionRef.current = resolve;

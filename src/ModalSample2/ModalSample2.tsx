@@ -17,7 +17,7 @@ export default function ModalSample2(): React.JSX.Element {
    * ダイアログを表示する。
    */
   const handleShowDialog = (): void => {
-    modalSampleDialog2Ref.current?.showdDialog((value) => {
+    modalSampleDialog2Ref.current?.showDialog((value) => {
       setSelectedFruit(value);
     });
   };
