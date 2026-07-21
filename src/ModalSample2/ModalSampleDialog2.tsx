@@ -1,5 +1,7 @@
-import React, { forwardRef, useImperativeHandle, useRef, useState } from 'react';
+import React, { useImperativeHandle, useRef, useState } from 'react';
 import { Button, Form, Modal } from 'react-bootstrap';
+
+import type { Ref } from 'react';
 
 export interface ModalSampleDialog2Ref {
   /**
@@ -14,7 +16,12 @@ type ResultFunction = (value: string) => void;
 /**
  * Modal sample dialog 2
  */
-const ModalSampleDialog2 = forwardRef<ModalSampleDialog2Ref>((props, ref) => {
+export default function ModalSampleDialog2(
+  props:
+    {
+      ref: Ref<ModalSampleDialog2Ref>
+    }
+): React.JSX.Element {
 
   const [showSelf, setShowSelf] = useState<boolean>(false);
   const resultFunctionRef = useRef<ResultFunction>(undefined);
@@ -28,7 +35,7 @@ const ModalSampleDialog2 = forwardRef<ModalSampleDialog2Ref>((props, ref) => {
     }
   };
 
-  useImperativeHandle(ref, () => ({
+  useImperativeHandle(props.ref, () => ({
 
     showDialog: (resultFunction?: ResultFunction): void => {
       setSelectedFruit('');
@@ -67,8 +74,4 @@ const ModalSampleDialog2 = forwardRef<ModalSampleDialog2Ref>((props, ref) => {
     </Modal>
   );
 
-});
-
-ModalSampleDialog2.displayName = ModalSampleDialog2.name;
-
-export default ModalSampleDialog2;
+}

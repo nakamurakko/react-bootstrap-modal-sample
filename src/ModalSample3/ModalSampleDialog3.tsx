@@ -1,5 +1,7 @@
-import React, { forwardRef, useImperativeHandle, useRef, useState } from 'react';
+import React, { useImperativeHandle, useRef, useState } from 'react';
 import { Button, Form, Modal } from 'react-bootstrap';
+
+import type { Ref } from 'react';
 
 export interface ModalSampleDialog3Ref {
   /**
@@ -14,7 +16,12 @@ type ResultFunction = (value: string) => void;
 /**
  * Modal sample dialog 3
  */
-const ModalSampleDialog3 = forwardRef<ModalSampleDialog3Ref>((props, ref) => {
+export default function ModalSampleDialog3(
+  props:
+    {
+      ref: Ref<ModalSampleDialog3Ref>
+    }
+): React.JSX.Element {
 
   const [showSelf, setShowSelf] = useState<boolean>(false);
   const resultFunctionRef = useRef<ResultFunction>(undefined);
@@ -28,7 +35,7 @@ const ModalSampleDialog3 = forwardRef<ModalSampleDialog3Ref>((props, ref) => {
     }
   };
 
-  useImperativeHandle(ref, () => ({
+  useImperativeHandle(props.ref, () => ({
 
     showDialog: async (): Promise<string> => {
       return await new Promise((resolve: ResultFunction) => {
@@ -69,8 +76,4 @@ const ModalSampleDialog3 = forwardRef<ModalSampleDialog3Ref>((props, ref) => {
     </Modal>
   );
 
-});
-
-ModalSampleDialog3.displayName = ModalSampleDialog3.name;
-
-export default ModalSampleDialog3;
+}
